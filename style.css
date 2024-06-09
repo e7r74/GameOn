@@ -452,3 +452,80 @@ input.open-card:checked ~ .card-footer {
 .social a:hover {
     color: #ffd700; /* Цвет иконок при наведении */
 }
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .card {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .card-header, .card-footer {
+        height: auto;
+        padding: 10px;
+    }
+
+    .card-content {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    label.card-toggle-label {
+        width: 40px;
+        height: 40px;
+        top: 10px;
+        right: 10px;
+    }
+
+    label.card-toggle-label::before,
+    label.card-toggle-label::after {
+        width: 20px;
+        height: 4px;
+    }
+
+    input[type="checkbox"]:checked ~ label.card-toggle-label {
+        left: 10px;
+    }
+
+    .card-content.left-content, .card-content.right-content {
+        width: 100%;
+        margin: 0;
+    }
+
+    input.open-card:checked ~ label.card-toggle-label {
+        left: calc(100% - 50px);
+    }
+}
+
+/* Further adjustments for even smaller screens */
+@media (max-width: 480px) {
+    .card-header h2, .card-content h3 {
+        font-size: 1.2em;
+    }
+
+    .card-content p {
+        font-size: 0.9em;
+    }
+
+    .card-footer a {
+        font-size: 0.9em;
+        padding: 5px 10px;
+    }
+}
+
+/* Footer adjustments */
+.footer {
+    padding: 5px 0;
+}
+
+.social a {
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+
