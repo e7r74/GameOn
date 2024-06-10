@@ -1,5 +1,5 @@
-/* author: https://codepen.io/V17h3m/pen/RwmaQVR
-Vicio Bonura */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 html {
 	box-sizing: border-box;
 	font-family: "Montserrat", sans-serif;
@@ -8,22 +8,22 @@ html {
 	font-style: normal;
 }
 *,
-::before,
+ ::before,
 ::after {
 	margin: 0;
 	padding: 0;
 	box-sizing: inherit;
 	font-weight: inherit;
 	font-family: inherit;
-}
+} 
+
 body {
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 20px;
 	color: #f0f0f0;
-	/*background-image: linear-gradient(43deg, #222e68 0%, #021d42 100%);*/
 	background: #101522;
 	background-blend-mode: hard-light;
 	background-image: radial-gradient(circle at 20% 20%, #ffcc7066 10%, #ffcc7000 50%), radial-gradient(circle at 80% 80%, #0033ff66 10%, #0033ff00 50%),
@@ -31,6 +31,7 @@ body {
 	background-size: 250% 250%;
 	animation: background-animation 30s infinite;
 }
+
 @keyframes background-animation {
 	0% {
 		background-position: 5% 0%;
@@ -452,28 +453,40 @@ input.open-card:checked ~ .card-footer {
 .social a:hover {
     color: #ffd700; /* Цвет иконок при наведении */
 }
+
+/* existing styles here... */
+
+
+
+
+
+
+
+
+/* Existing styles here... */
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;
         padding: 10px;
     }
-    
+
     .card {
         width: 100%;
-        height: auto;
+        height: 700px; /* Высота для мобильных устройств */
         margin-bottom: 20px;
     }
 
     .card-header, .card-footer {
-        height: auto;
+        height: auto; /* Автоматическая высота для адаптивности */
         padding: 10px;
     }
 
     .card-content {
         width: 100%;
-        height: auto;
-        padding: 10px;
-    }
+        height: auto; /* Автоматическая высота для адаптивности */
+        padding: 20px; /* Увеличенный отступ для лучшей читаемости */
+    }а
 
     label.card-toggle-label {
         width: 40px;
@@ -502,30 +515,36 @@ input.open-card:checked ~ .card-footer {
     }
 }
 
-/* Further adjustments for even smaller screens */
+/* Стили для устройств с разрешением до 480px */
 @media (max-width: 480px) {
     .card-header h2, .card-content h3 {
-        font-size: 1.2em;
+        font-size: 1.5em; /* Увеличение размера текста для лучшей читаемости */
     }
 
     .card-content p {
-        font-size: 0.9em;
+        font-size: 1em; /* Увеличение размера текста для лучшей читаемости */
     }
 
     .card-footer a {
-        font-size: 0.9em;
-        padding: 5px 10px;
+        font-size: 1em; /* Увеличение размера текста для лучшей читаемости */
+        padding: 10px 20px; /* Увеличение отступов для удобства */
     }
 }
 
-/* Footer adjustments */
-.footer {
-    padding: 5px 0;
-}
+/* Специфичные стили для очень узких экранов (например, до 320px) */
+@media (max-width: 320px) {
+    .card-header h2, .card-content h3 {
+        font-size: 1.2em; /* Размер текста для лучшей читаемости на очень узких экранах */
+    }
 
-.social a {
-    font-size: 20px;
-    margin: 0 5px;
+    .card-content p {
+        font-size: 0.9em; /* Размер текста для лучшей читаемости на очень узких экранах */
+    }
+
+    .card-footer a {
+        font-size: 0.9em; /* Размер текста для лучшей читаемости на очень узких экранах */
+        padding: 5px 10px; /* Уменьшение отступов кнопок внизу карточек */
+    }
 }
 
 
