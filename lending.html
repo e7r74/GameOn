@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script defer src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  
+
+<!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  
+
+
+<title>PC Club</title>
+    <link rel="stylesheet" href="lending\styles.css">
+
+
+    
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <!-- <div id="click-logo" style="display: none; position: absolute; z-index: 9999;margin-left: -8%;margin-top: -5%;">
+        <img src="img/GameOn-removebg-preview.png" alt="Логотип" style="width: 60px; height: auto;">
+    </div> -->
+    
+    <header>
+        <div class="containerMineo">
+            <a href="lending.html">
+                <img src="img/GameOn-removebg-preview.png" alt="Логотип" style="width: 150px; height: auto;">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">О нас</a></li>
+                    <!-- <li><a href="#tournaments">Турниры</a></li> -->
+                    <li><a href="#pricing">Адресы</a></li>
+                    <!-- <li><a href="#game">Игры</a></li> -->
+                    <li><a href="#maps">2ГИС</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <!-- <a href="#" class="cta">Забронировать место</a> -->
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()"> <!-- Кнопка с тремя полосками -->
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <script>
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+    
+                    if (targetSection) {
+                    gsap.to(window, {
+                        scrollTo: targetSection,
+                        duration: 1, // Время анимации в секундах
+                        ease: "power2.inOut"
+                    });
+                    }
+                });
+                });
+    
+            </script>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Заменяем video на img для использования GIF -->
+        <img src="img\IMG_2262.gif" alt="Hero Background" id="bg-gif" class="bg-gif">
+
+        
+        <div class="hero-content">
+            <h3 style="color: aliceblue;">Добро пожаловать в GAME ON!</h3>
+            
+            <a href="#about" class="cta">Подробнее</a>
+            <script>
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+    
+                    if (targetSection) {
+                    gsap.to(window, {
+                        scrollTo: targetSection,
+                        duration: 1, // Время анимации в секундах
+                        ease: "power2.inOut"
+                    });
+                    }
+                });
+                });
+    
+            </script>
+        </div>
+
+    </section>
+    <div class="particles">
+       
+    </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+    
+        <div class="container">
+            
+            <section class="advantages">
+            <h1>НАШИ ПРЕИМУЩЕСТВА</h1>
+            <div class="advantage-list">
+                <div class="advantage-item">
+                    <!-- Replace with actual icons as needed -->
+                    <dotlottie-player
+                    src="https://lottie.host/f4c7767d-0e36-404b-8127-51fa1fa09ab5/n8IOvqWG0t.lottie"
+                    background="transparent"
+                    speed="1"
+                    style="width: 100px; height: 100px; margin-left: 25%;"
+                    loop
+                    autoplay
+                    ></dotlottie-player>
+                    <h3>8 филиалов по всему Алматы</h3>
+                    <p>Чтобы ты мог играть, где тебе удобно</p>
+                </div>
+                <div class="advantage-item">
+                    <dotlottie-player
+                    src="https://lottie.host/26c54c07-4a91-439b-b00a-3098bf95efd4/RVorIB852V.lottie"
+                    background="transparent"
+                    speed="1"
+                    style="width: 100px; height: 100px; margin-left:25%"
+                    loop
+                    autoplay
+                    ></dotlottie-player>
+                    <h3>ТОПОВОЕ ЖЕЛЕЗО</h3>
+                    <p>Любые игры пойдут на ультра настройках</p>
+                </div>
+                <div class="advantage-item">
+                    <dotlottie-player
+                        src="https://lottie.host/516349d9-3db8-4ed3-8581-6007dd323185/0h9kQoxJ3l.lottie"
+                        background="transparent"
+                        speed="1"
+                        style="width: 100px; height: 100px; margin-left: 25%;"
+                        loop
+                        autoplay
+                        ></dotlottie-player>
+                    <h3>НИЗКИЕ ЦЕНЫ</h3>
+                    <p>А еще скидки и бонусная программа</p>
+                </div>
+                <div class="advantage-item">
+                    <dotlottie-player
+                        src="https://lottie.host/6b65f301-bcf3-4393-a55f-ee1daaad1a3a/4UbKKIFpiZ.lottie"
+                        background="transparent"
+                        speed="1"
+                        style="width: 100px; height: 100px; margin-left:25%"
+                        loop
+                        autoplay
+                        ></dotlottie-player>
+                    <h3>КРУТЫЕ АДМИНЫ</h3>
+                    <p>Всегда помогут, подскажут и сделают игру приятной</p>
+                </div>
+            </div>
+            
+        </div>
+        </sectionc>
+        
+            
+        <section id="about-slider">
+            <div class="slider-container">
+                <!-- <h3>Наши лучшие моменты</h3> -->
+                <div class="slider">
+                    <div class="slide active" style="background-image: url('img/esentai2.jpg');"></div>
+                    <div class="slide" style="background-image: url('img/oinup1.jpg');"></div>
+                    <!-- <div class="slide" style="background-image: url('https://avatars.dzeninfra.ru/get-zen_doc/1881575/pub_64f98ee4cf59fe27f0957e50_64f98ef683912c11aebaa75a/scale_1200');"></div> -->
+                    <div class="slide" style="background-image: url('img/premium1.jpg');"></div>
+                    <div class="slide" style="background-image: url('img/sputnik2.jpg');"></div>
+                    <!-- <div class="slide" style="background-image: url('img/sputnik1.jpg');"></div> -->
+                </div>
+                <div class="slider-buttons">
+                    <button class="prev-btn">←</button>
+                    <button class="next-btn">→</button>
+                </div>
+            </div>
+        </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            let currentIndex = 0;
+        
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+            }
+        
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            }
+        
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(currentIndex);
+            }
+        
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+        
+            // Автоматическое переключение слайдов
+            setInterval(nextSlide, 5000); // 5 секунд
+        });
+        
+          </script>
+    </section>
+   
+
+    <section id="pricing" class="pricing">
+        <H2>Адресы</H2>
+        <br>
+        <div class="container">
+          <br>
+            <div class="pricing-cards">
+                <!-- Филиал 1 -->
+                <div class="branch-card">
+                    <div class="image-container">
+                    <img src="img\GameOn-removebg-preview.png" alt="Филиал 1">
+                </div>
+                    <h3>Game On</h3>
+                    <p>Керемет, микрорайон Керемет, 7 к43</p>
+                    <a href="#contact" class="cta">Связаться</a>
+                </div>
+                <!-- Филиал 2 -->
+                <div class="branch-card">
+                    <div class="image-container">
+                    <img src="img\GameOn-removebg-preview.png" alt="Филиал 1">
+                </div>
+                    <h3>GAME ON <br>PREMIUM</h3>
+                    <p>Керемет, микрорайон Керемет, 7 к43</p>
+                    <a href="#contact" class="cta">Связаться</a>
+                </div>
+                <!-- Филиал 3 -->
+                <div class="branch-card">
+                    <div class="image-container">
+                    <img src="img\GameOn-removebg-preview.png" alt="Филиал 1">
+                </div>
+                    <h3>GAME ON <br>SPUTNIK</h3>
+                    <p>ЖК Спутник, Спутник, микрорайон Мамыр 1, 29</p>
+                    <a href="#contact" class="cta">Связаться</a>
+                </div>
+                <!-- Филиал 4 -->
+                <div class="branch-card">
+                    <div class="image-container">
+                    <img src="img\GameOn-removebg-preview.png" alt="Филиал 1">
+                </div>
+                    <h3>GAME ON <br>OINUP BY</h3>
+                    <p>ЖК Бухар Жырау Тауэрс, бульвар Бухар жырау, 27/5 блок 1</p>
+                    <a href="#contact" class="cta">Связаться</a>
+                </div>
+                <!-- Филиал 5 -->
+                <div class="branch-card">
+                    <div class="image-container">
+                    <img src="img\GameOn-removebg-preview.png" alt="Филиал 1">
+                </div>
+                    <h3>GAME ON <br>ESENTAI</h3>
+                    <p>Проспект Аль-Фараби, 120/55</p>
+                    <a href="#contact" class="cta">Связаться</a>
+                </div>
+                <!-- Филиал 6 -->
+                <div class="branch-card">
+                    <div class="image-container">
+                    <img src="img\GameOn-removebg-preview.png" alt="Филиал 1">
+                </div>
+                    <h3>GAME ON<br> GAGARINA</h3>
+                    <p>ЖК Дом на Абая, проспект Гагарина, 124</p>
+                    <a href="#contact" class="cta">Связаться</a>
+                </div>
+                <!-- Филиал 7 -->
+                <div class="branch-card">
+                    <div class="image-container">
+                    <img src="img\GameOn-removebg-preview.png" alt="Филиал 1">
+                </div>
+                    <h3>GAME ON<br> ZHETSY</h3>
+                    <p>Жетысу-3 микрорайон, 67</p>
+                    <a href="#contact" class="cta">Связаться</a>
+                </div>
+                <!-- Филиал 8 -->
+                <div class="branch-card">
+                    <div class="image-container">
+                    <img src="img\GameOn-removebg-preview.png" alt="Филиал 1">
+                </div>
+                    <h3>GAME ON<br> SHEVCHENKO</h3>
+                    <p>На стадии открытие!</p>
+                    <a href="#contact" class="cta">Связаться</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- 
+    <section id="game" class="game-section">
+        <h2>Игры<h2>
+        <div class="owl-carousel custom-carousel owl-theme">
+          <div class="item active" style="background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/dota-2.jpg);">
+            <div class="item-desc">
+              <h3>Dota 2</h3>
+              <p>Dota 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the
+                Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/winter-3.jpg);">
+            <div class="item-desc">
+              <h3>The Witcher 3</h3>
+              <p>The Witcher 3 is a multiplayer online battle arena by Valve. The game is a sequel to Defense
+                of the Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/rdr-2.jpg);">
+            <div class="item-desc">
+              <h3>RDR 2</h3>
+              <p>RDR 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the
+                Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/pubg.jpg);">
+            <div class="item-desc">
+              <h3>PUBG Mobile</h3>
+              <p>PUBG 2 is a multiplayer online battle arena by Valve. The game is a sequel to Defense of the
+                Ancients, which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/fortnite.jpg);">
+            <div class="item-desc">
+              <h3>Fortnite</h3>
+              <p>Battle royale where 100 players fight to be the last person standing. which was a community-created mod
+                for Blizzard Entertainment's Warcraft III.</p>
+            </div>
+          </div>
+          <div class="item" style="background-image: url(https://www.yudiz.com/codepen/expandable-animated-card-slider/far-cry-5.jpg);">
+            <div class="item-desc">
+              <h3>Far Cry 5</h3>
+              <p>Far Cry 5 is a 2018 first-person shooter game developed by Ubisoft.
+                which was a community-created mod for Blizzard Entertainment's Warcraft III.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+      <script >
+      $(".custom-carousel").owlCarousel({
+        autoWidth: true,
+        loop: true
+      });
+      $(document).ready(function () {
+        $(".custom-carousel .item").click(function () {
+          $(".custom-carousel .item").not($(this)).removeClass("active");
+          $(this).toggleClass("active");
+        });
+      });
+      </script> -->
+
+
+
+
+<section id="maps" class="maps">
+    <h>2ГИС</h>
+    <div class="container">
+   
+        
+        <div id="map"></div>
+    
+        <!-- Подключение 2ГИС API -->
+        <!-- Подключение 2ГИС API -->
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    
+        <script>
+            // Координаты филиалов
+    
+    const branches = [
+        { name: 'Oinup by GameOn (ЖК Бухар Жырау Тауэрс)', coords: [43.23396, 76.92377],link: 'https://2gis.kz/almaty/branches/70000001075169730/firm/70000001066425577/76.923874%2C43.234028?m=76.923874%2C43.234028%2F17.65' },
+        { name: 'Oinup by GameOn (Улица Жамбыла, 98)', coords: [43.24677, 76.93056] ,link: 'https://2gis.kz/almaty/branches/70000001075169730/firm/70000001092722019/76.930574%2C43.246815?m=76.930574%2C43.246815%2F17.65'},
+        { name: 'GameOn (ЖК Дом на Абая)', coords: [43.23518, 76.89540] ,link: 'https://2gis.kz/almaty/branches/70000001075169730/firm/70000001077155934/76.895505%2C43.237726?m=76.895505%2C43.237726%2F17.65'},
+        { name: 'GameOn (Керемет, микрорайон Керемет, 7 к43)', coords: [43.23520, 76.93884],link: 'https://2gis.kz/almaty/branches/70000001075169730/firm/70000001081546439/76.938551%2C43.236205?m=76.935719%2C43.234896%2F17.65' },
+        { name: 'GameOn Premium (Керемет)', coords: [43.23518, 76.93884],link: 'https://2gis.kz/almaty/branches/70000001075169730/firm/70000001046406244/76.938677%2C43.236214?m=76.935719%2C43.234896%2F17.65' },
+        { name: 'GameOn Essentai (Проспект Аль-Фараби, 120/55)', coords: [43.21590, 76.92953] ,link: 'https://2gis.kz/almaty/branches/70000001075169730/firm/70000001088457455/76.929443%2C43.215769?m=76.929443%2C43.215769%2F17.65'},
+        { name: 'GameOn (Жетысу-3 микрорайон, 67)', coords: [43.22045, 76.84303] ,link: 'https://2gis.kz/almaty/branches/70000001075169730/firm/70000001035253320/76.84307%2C43.220386?m=76.84307%2C43.220386%2F17.65'},
+        { name: 'GameOn (ЖК Спутник, Мамыр 1, 29)', coords: [43.21210, 76.84299],link: 'https://2gis.kz/almaty/branches/70000001075169730/firm/70000001088457438/76.843029%2C43.211909?m=76.843029%2C43.211909%2F17.65' }
+    
+    
+    ];
+    
+    // Инициализация карты
+    DG.then(function() {
+        const map = DG.map('map', {
+            center: [43.238949, 76.889709], // Центр карты
+            zoom: 13                      // Масштаб карты
+        });
+    
+        // Добавление меток филиалов на карту
+        branches.forEach(branch => {
+            DG.marker(branch.coords)
+                .addTo(map)
+                .bindPopup(`<b>${branch.name}</b><br><a href="${branch.link}" target="_blank">Открыть в 2ГИС</a>`);
+        });
+    });
+    
+        </script>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Контакты</h2>
+        <div class="container">
+       
+            <h1 class="logo">
+                <a href="lending.html">
+                    <img src="img/GameOn-removebg-preview.png" alt="Логотип" style="width: 150px; height: auto;">
+                </a>
+                <div class="social">
+                    <a href="https://www.instagram.com/game_on_club/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@game_on_almaty?_t=8pYKorowPtW&_r=1"><i class="bi bi-tiktok"></i></a>
+                    <!-- <a href="https://site23852274.nicepage.io/"><i class="bi bi-question-circle"></i></a> -->
+                </div>               
+            </h1>
+          
+            
+        <p style="color: #ffcc00;">Телефон: <a href="tel:+77074473086" style="color: #ffcc00;">+7 707 447 3086</a></p>
+        <p style="color: #ffcc00;">Электронная почта: <a href="mailto:gameonkz@bk.ru" style="color: #ffcc00;">gameonkz@bk.ru</a></p> 
+        </div>
+    </section>
+    
+    <script src="lending\script.js"></script>
+    <!--   -->
+    
+ 
+</body>
+</html>
+Game On 2024 ® Товарный знак зарегистрирован
+
+<!-- <p>Остались вопросы? Свяжитесь с нами через форму или мессенджеры!</p>
+            <form action="lending\submit_form.php" method="POST">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш Email" required>
+                <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                <button type="submit" class="cta">Отправить</button>
+            </form> -->

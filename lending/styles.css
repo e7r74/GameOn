@@ -1,0 +1,903 @@
+/* Общие стили */
+@charset "utf-8";
+
+/******* Fonts Import Start **********/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+/********* Fonts Face CSS End **********/
+
+/******* Common Element CSS Start ******/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    /* font-family: Arial, sans-serif; */
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+
+    font-size: 16px;
+}
+/* 
+html {
+    scroll-behavior: smooth;
+  } */
+  
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.container {
+    width: 70%;
+    
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.containerMineo{
+    width: 70%;
+    height: 45px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* CTA */
+.cta {
+   display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00; /* Цвет фона */
+    color: #000; /* Цвет текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 5px; /* Закругление углов */
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#bg-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+/* About Section */
+        /* Секция "О нашем клубе" */
+        .about {
+            position: relative;
+            padding: 60px 20px;
+            background-color: #1a1a1a;
+            overflow: hidden;
+        }
+
+        /* Заголовок */
+        .about h2 {
+            font-size: 3em;
+            font-weight: bold;
+            color: #FFD700; /* Золотой цвет */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Описание */
+        .about p {
+            max-width: 800px;
+            /* margin: 0 auto; */
+            
+            font-size: 1.2em;
+            line-height: 1.8;
+            opacity: 0.9;
+            margin-top: 1%;
+        }
+
+        /* Лампочки */
+        /* .lamp {
+            position: absolute;
+            width: 75px;
+            height: 120px;
+            background: url('https://github.com/e7r74/gameonbeta/blob/main/img/GameOn-removebg-preview.png?raw=true') no-repeat center;
+            background-size: cover;
+            animation: flicker 3s infinite;
+        } */
+
+        /* Позиции лампочек
+        .lamp-1 { top: 10%; left: 20%; }
+        .lamp-2 { top: 10%; right: 20%; }
+        .lamp-3 { top: 50%; left: 10%; }
+        .lamp-4 { top: 50%; right: 10%; } */
+
+        /* Анимация мерцания */
+        /* @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            5%, 20%, 40% { opacity: 0.2; }
+            30%, 50%, 70% { opacity: 0.5; }
+            80%, 90% { opacity: 0.7; }
+        } */
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+
+
+.feature h3 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.pricing-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрируем карточки по горизонтали */
+    gap: 20px;
+}
+
+.branch-card {
+    background-color: #222;
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.branch-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.branch-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.branch-card p {
+    color: #ccc;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.branch-card .cta {
+    background-color: #ffcc00;
+    color: #222;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.branch-card .cta:hover {
+    background-color: #ff9900;
+}
+
+/* Рамки и анимации изображений */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid #ffcc00;
+    display: flex; /* Используем flexbox для центрирования изображения */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+}
+/* 
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+} */
+
+/* .branch-card:hover .image-container img {
+    transform: scale(1.1);
+} */
+
+/* Эффект анимации фона карточки */
+.branch-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 204, 0, 0.3), rgba(255, 153, 0, 0.2));
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.branch-card:hover::before {
+    opacity: 1;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Анимация свечения */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 204, 0, 1);
+    }
+}
+
+.best-deal {
+    background-color: #ffcc00;
+    color: #fff;
+}
+
+.best-deal:hover {
+    background-color: #ffcc00;
+}
+
+/* Contact Section */
+/* background-color: #1c1c1c; */
+.contact {
+    background-color: #1c1c1c; /* Цвет фона */
+    color: #ffcc00; /* Цвет текста */
+    text-align: center; /* Центрирование текста */
+    padding: 20px; /* Отступы */
+}
+
+.contact h2 {
+    font-size: 24px; /* Размер заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.contact p {
+    font-size: 18px; /* Размер текста */
+    margin: 10px 0; /* Вертикальные отступы */
+}
+
+.contact .social a {
+    margin: 0 10px; /* Горизонтальные отступы между иконками */
+    color: #ffcc00; /* Цвет иконок */
+    text-decoration: none; /* Убирает подчеркивание */
+}
+
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.contact button {
+    padding: 15px;
+    background-color: #ffcc00;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #ffcc00;
+}
+
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh; /* Высота секции */
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Покрытие изображения */
+    z-index: -1; /* Положение на заднем фоне */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Положение контента */
+    text-align: center; /* Центрирование текста */
+    color: white; /* Цвет текста */
+}
+
+
+
+/* Анимация */
+
+
+
+/* Стили для контейнера слайдера */
+/* Стили для контейнера слайдера */
+/* Стили для контейнера слайдера */
+
+
+/* Стили для слайдов */
+.animated-3d-element {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+#bg-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+
+
+
+/* Уменьшаем отступы у текста */
+.about p {
+    margin-top: 10px; /* Установите желаемое значение отступа */
+}
+
+
+.social a {
+    color: var(--text-color);
+    
+    margin: 0 15px;
+    font-size: 26px;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.hamburger {
+    display: none; /* По умолчанию скрыто на больших экранах */
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    height: 25px;
+}
+
+.hamburger .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+    
+}
+
+
+
+
+
+
+.advantages {
+    padding: 20px;
+    margin-left: 18%;
+}
+
+.advantages h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.advantage-list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.advantage-item {
+    width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.advantage-item svg {
+    width: 40px;
+    height: 40px;
+    fill: #ff6a00;
+    margin-bottom: 10px;
+}
+
+.advantage-item h3 {
+    font-size: 16px;
+    color: #ff6a00;
+    margin-bottom: 5px;
+}
+
+.advantage-item p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#about-slider {
+    background: #121212;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.slider-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #ff6a00;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.slide {
+    min-width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+.slider-buttons {
+    margin-top: 20px;
+}
+
+.slider-buttons .prev-btn,
+.slider-buttons .next-btn {
+    background: #ff6a00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.slider-buttons .prev-btn:hover,
+.slider-buttons .next-btn:hover {
+    background: #ee0979;
+}
+
+
+
+
+
+
+/* cartinca */
+
+/* .wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100lvh;
+  } */
+  
+  /* .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-family: sans-serif;
+    overflow: hidden;
+  } */
+/*   
+  .slide h2 {
+    mix-blend-mode: hard-light;
+    color: crimson;
+    text-shadow: 0px 4px 4px black;
+  } */
+  
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+
+
+
+
+
+/* 
+
+игры */
+.clear {
+    clear: both;
+  }
+  img2 {
+    max-width: 100%;
+    border: 0px;
+  }
+  ul,
+ol {
+  list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+  }
+  a:focus,
+  a:active,
+  a:visited,
+  a:hover {
+    text-decoration: none;
+    outline: none;
+  }
+  a:hover {
+    color: #e73700;
+  }
+  h2 {
+    margin-bottom: 48px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    position: relative;
+    text-transform: capitalize;
+  }
+  h3 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+  button {
+    outline: none !important;
+  }
+  .line-title {
+    position: relative;
+    width: 400px;
+  }
+  .line-title::before,
+  .line-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    border-radius: 2px;
+  }
+  .line-title::before {
+    width: 100%;
+    background: #f2f2f2;
+  }
+  .line-title::after {
+    width: 32px;
+    background: #e73700;
+  }
+  
+  /******* Middle section CSS Start ******/
+  /* -------- Landing page ------- */
+  .game-section {
+    padding: 60px 50px;
+  }
+  .game-section .owl-stage {
+    margin: 15px 0;
+    display: flex;
+    display: -webkit-flex;
+  }
+  .game-section .item {
+    margin: 0 15px 60px;
+    width: 320px;
+    height: 400px;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+    background: #343434 no-repeat center center / cover;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    cursor: pointer;
+  }
+  .game-section .item.active {
+    width: 500px;
+    box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+  }
+  .game-section .item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  }
+  .game-section .item-desc {
+    padding: 0 24px 12px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transform: translateY(calc(100% - 54px));
+    -webkit-transform: translateY(calc(100% - 54px));
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+  }
+  .game-section .item.active .item-desc {
+    transform: none;
+    -webkit-transform: none;
+  }
+  .game-section .item-desc p {
+    opacity: 0;
+    -webkit-transform: translateY(32px);
+    transform: translateY(32px);
+    transition: all 0.4s ease-in-out 0.2s;
+    -webkit-transition: all 0.4s ease-in-out 0.2s;
+  }
+  .game-section .item.active .item-desc p {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  .game-section .owl-theme.custom-carousel .owl-dots {
+    margin-top: -20px;
+    position: relative;
+    z-index: 5;
+  }
+/* Mobile styles */
+@media (max-width: 768px) {
+    .pricing-cards {
+        display: flex;
+        width: 80%;
+        flex-wrap: wrap;
+        justify-content: center; /* Центрируем карточки по горизонтали */
+        gap: 20px;
+    }
+
+    .advantages {
+        padding: 20px;
+       margin-right: 19%;
+    }
+
+
+    .hamburger {
+        display: flex;
+    }
+    .container {
+        width: 90%;
+        flex-direction: column;
+    }
+
+   
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+     
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        font-size: 18px;
+    }
+
+
+    
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .branch-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact form {
+        width: 100%;
+    }
+
+    #map {
+        width: 30%; /* ширина карты */
+    height: 30%; /* высота карты */
+    border-radius: 10px; /* закругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* тень */
+    }
+    
+
+}
+
+
+
+
+
+/* игры */
+h2 {
+    margin-bottom: 32px;
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .line-title {
+    width: 330px;
+  }
+  .game-section {
+    padding: 50px 30px 40px;
+  }
+  .game-section .item {
+    margin: 0 12px 60px;
+    width: 240px;
+    height: 330px;
+  }
+  .game-section .item.active {
+    width: 360px;
+  }
+  .game-section .item-desc {
+    transform: translateY(calc(100% - 42px));
+    -webkit-transform: translateY(calc(100% - 42px));
+  }
+
+  #map {
+    width: 100%; /* ширина карты */
+height: 600px; /* высота карты */
+border-radius: 10px; /* закругленные углы */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* тень */
+}
